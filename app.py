@@ -6,6 +6,7 @@ import pyperclip
 import os
 from dotenv import load_dotenv
 load_dotenv()
+os.environ['GOOGLE_API_KEY']='AIzaSyAA59xkxMEUqffuaNMzrTxK6m5AJpY3tCw'
 
 def model():
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
@@ -69,4 +70,11 @@ if submit:
         answer = getLLamaresponse(input_text,no_words,blog_style)
         st.success('Blog Generated!', icon="✅")
         st.write(answer)
-        st.button("📋", on_click=copy_text(answer))
+
+        ## Uncomment if using in system HF doesn't Support Copy to clipboard
+        # st.button("📋", on_click=copy_text(answer))
+        st.markdown('''
+
+
+                :orange[Run in your system to access Copy to Clipboard Feature]
+        ''')
