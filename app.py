@@ -61,7 +61,19 @@ st.set_page_config(page_title="AI-Blogger",
                     layout='centered' )
 
 st.header("AI Blogger 🤖", divider='rainbow')
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
 
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+#? Make it False in DEV Mode
+button_disabled = True
+# Button with info hover
+if button_disabled:
+    st.toast("Mic Button is disabled in production. HF Don't have Audio Device")
 
 col1,col2=st.columns([20,3])
 with col1:
@@ -69,10 +81,9 @@ with col1:
     text = st.empty()
     input_text = text.text_input("Enter the Blog Topic")
     
-
 with col2:
     st.write(':grey[.]')
-    recorder = st.button("🎙️", help="Blog Topic by Voice")
+    recorder = st.button("🎙️", help="Blog Topic by Voice", key="mic", disabled=button_disabled)
 
 if recorder:
     recorded_text = record_audio()
