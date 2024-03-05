@@ -5,3 +5,5 @@ streamlit
 pyperclip
 huggingface_hub
 python-dotenv
+SpeechRecognition
+PyAudio
