@@ -10,6 +10,3 @@ SpeechRecognition
 PyAudio
 pdfplumber
 python-docx
-
-
-https://github.com/oschwartz10612/poppler-windows/releases/download/v24.02.0-0/Release-24.02.0-0.zip
