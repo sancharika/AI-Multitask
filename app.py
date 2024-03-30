@@ -3,7 +3,7 @@ import streamlit as st
 import blogger
 import gist
 import pdfplumber
-import ats1
+import ats
 import docx
 
 st.set_page_config(page_title='AI MultiTask', page_icon='🤖', layout='centered')
@@ -46,5 +46,5 @@ elif option == "Summerize":
     gist.run_gist(st.session_state['doc_text'])
 
 elif option == "ATS":
-    ats1.run_ats(st.session_state['doc_text'])
+    ats.run_ats(st.session_state['doc_text'])
     
