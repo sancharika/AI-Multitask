@@ -1,5 +1,5 @@
 ---
-title: AI Blogger
+title: AI MultiTask
 emoji: 👀
 colorFrom: purple
 colorTo: yellow
@@ -44,13 +44,13 @@ AI MultiTask is a Streamlit-based application that offers multiple AI-powered fu
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/sancharika/AI-Blogger.git
+    git clone https://github.com/sancharika/AI-Multitask.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd AI-Blogger
+    cd AI-Multitask
     ```
 
 3. Install dependencies:
